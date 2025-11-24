@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Your Name</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="Professional portfolio template for freelancers, developers and designers. Clean, responsive and ready to customize.">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">YourName</a>
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Design & build beautiful products that users love.</h1>
+          <p class="lead">I’m a freelance web developer & designer. I turn ideas into fast, modern websites and apps.</p>
+          <div class="hero-cta">
+            <a href="#work" class="btn">View Work</a>
+            <a href="#contact" class="btn ghost">Hire Me</a>
+          </div>
+          <ul class="meta">
+            <li><strong>Available:</strong> For hire</li>
+            <li><strong>Based:</strong> Your City</li>
+          </ul>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/hero.jpg" alt="Portfolio hero screenshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section id="work" class="section">
+      <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-sub">Projects that show my process and results.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="assets/project1.jpg" alt="Project 1">
+            <div class="project-info">
+              <h3>Project One</h3>
+              <p>Landing page + conversion optimization for local business.</p>
+              <a class="project-link" href="#">View case</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/project2.jpg" alt="Project 2">
+            <div class="project-info">
+              <h3>Project Two</h3>
+              <p>Portfolio site for a photographer — gallery and CMS-ready.</p>
+              <a class="project-link" href="#">View case</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/project3.jpg" alt="Project 3">
+            <div class="project-info">
+              <h3>Project Three</h3>
+              <p>E-commerce prototype with simple checkout flow.</p>
+              <a class="project-link" href="#">View case</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section bg-light">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/avatar.jpg" alt="Your avatar">
+        </div>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>I help brands and startups ship polished websites fast. I focus on performance, simple UX, and measurable results. I code with HTML, CSS, JavaScript and often use lightweight frameworks for production builds.</p>
+          <ul class="skills">
+            <li>HTML & CSS (responsive)</li>
+            <li>JavaScript + modern toolchain</li>
+            <li>Design systems & UI</li>
+            <li>Performance optimization</li>
+          </ul>
+          <a href="#contact" class="btn">Work with me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <div class="service">
+            <h3>Web Design</h3>
+            <p>Clean UI, usable layouts and brand-consistent visual systems.</p>
+          </div>
+          <div class="service">
+            <h3>Web Development</h3>
+            <p>Fast, accessible frontends with simple CMS integration options.</p>
+          </div>
+          <div class="service">
+            <h3>Consulting</h3>
+            <p>Product & performance audits, roadmap and implementation guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section bg-dark">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h2>Let’s Talk</h2>
+          <p>Tell me about your project — quick replies via WhatsApp or email.</p>
+          <ul class="contact-list">
+            <li><strong>WhatsApp:</strong> +234 000 000 0000</li>
+            <li><strong>Email:</strong> hello@example.com</li>
+          </ul>
+          <a href="mailto:hello@example.com" class="btn">Send Email</a>
+        </div>
+
+        <form class="contact-form" action="#" method="POST" onsubmit="return false;">
+          <label><span>Name</span><input type="text" name="name" required></label>
+          <label><span>Email</span><input type="email" name="email" required></label>
+          <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> YourName — Built with care.</p>
+      <nav class="footer-nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Small JS for interactions -->
+  <script>
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+
+    // Simple form "send" feedback
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thanks — message captured (demo). Replace with real endpoint later.');
+      form.reset();
+    });
+  </script>
+</body>
+          </html>
